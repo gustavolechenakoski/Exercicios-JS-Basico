@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 007</title>
+</head>
+<body>
+    <h1>Média do aluno v1.0</h1>
+    <button onclick="mediaAluno()">Clique aqui</button>
+
+    <script>
+
+        function mediaAluno(){
+
+            let nome = prompt("Qual é o nome do aluno?");
+            let nota1 = prompt(`Qual foi a primeira nota de ${nome}?`);
+            let nota2 = prompt(`Além de ${nota1}, qual foi a outra nota de ${nome}?`); 
+
+            var num1 = parseInt(nota1);
+            var num2 = parseInt(nota2);
+            
+            let media = (num1 + num2) / 2;
+
+            let resultado = document.getElementById("resultado");
+
+            resultado.innerHTML = `<p>Calculando a média final de <mark>${nome}.</mark></p>` 
+            resultado.innerHTML += `<p>As notas obtidas foram <mark>${nota1} e ${nota2}.</mark></p>`
+            resultado.innerHTML += `<p>A média final será <mark>${media}.</mark></p>`
+
+        }
+            
+    </script>
+    <section id="resultado">
+
+        <p>O resultado vem aqui...</p>
+
+    </section>
+</body>
+</html>
